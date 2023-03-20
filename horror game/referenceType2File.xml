@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeDate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeDate>
+    <guid>276040dbce2b3ab48ba33ae16c8ea4a2</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2022-12-14T05:37:41+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>379239086617c2d478325caa73100448</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2022-12-14T05:37:41+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>cbeedad64ed38be49ab8b95dee208c6a</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2022-12-14T05:37:41+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>728246d7980a8244ab639b87d707e625</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/CollectionData.cs</fileName>
+    <timeStamp>2022-12-14T05:37:41+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>8194c23551ee3ae40be65ee06eb04d24</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2022-12-14T05:37:41+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>e630a366edbe8bb41b427d4376262204</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2022-12-14T05:37:41+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>a63d817321837a84b850dfe3ab175869</guid>
+    <fileName>Assets/MouseLook.cs</fileName>
+    <timeStamp>2023-03-11T04:54:57.4639838+02:00</timeStamp>
+    <typeFullName>
+      <string>MouseLook</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e33484ba06e0b4e43b66399200daabd8</guid>
+    <fileName>Assets/PlayerMovement.cs</fileName>
+    <timeStamp>2023-03-11T05:54:03.9641734+02:00</timeStamp>
+    <typeFullName>
+      <string>PlayerMovement</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1edb39aa169eb40cfa015393d5396847</guid>
+    <fileName>Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_CustomWind.cs</fileName>
+    <timeStamp>2023-02-26T14:19:16+02:00</timeStamp>
+    <typeFullName>
+      <string>CTI.CTI_CustomWind</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a6013210bd40b4cde9944fed4d9f8082</guid>
+    <fileName>Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_Utils.cs</fileName>
+    <timeStamp>2023-02-26T14:19:34+02:00</timeStamp>
+    <typeFullName>
+      <string>CTI.CTI_Utils</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>3bd7ba1dccff84229b37ae2455db67a1</guid>
+    <fileName>Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/Editor/CTI_AdvancedEdgeFluttering.cs</fileName>
+    <timeStamp>2023-02-26T14:19:18+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>7bb9e0160882341dfa7539c64f31f315</guid>
+    <fileName>Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/Editor/CTI_DetailsEnum.cs</fileName>
+    <timeStamp>2023-02-26T14:19:28+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>71369e1df01d140e5888122d9de3bd6c</guid>
+    <fileName>Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/Editor/CTI_ShaderGUI.cs</fileName>
+    <timeStamp>2023-02-26T14:19:26+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+</ArrayOfTypeDate>
