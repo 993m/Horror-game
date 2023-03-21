@@ -691,13 +691,7 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Build: 0
-    Collab: 0
-    Game Performance: 0
-    Purchasing: 0
-    UDP: 0
     UNet: 1
-    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -712,11 +706,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 53bd7cfb-7656-40d2-97b6-9e46d027cf68
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: horror game
-  organizationId: maria116
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
