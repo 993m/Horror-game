@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed;
-
     public float defaultSpeed = 4f;
     public float sprintSpeed = 10f;
+    public float speed;
     public float sprintTime = 10.0f; // total time for sprint
     private float sprintTimer; // current time for sprint
 
@@ -18,12 +17,14 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     bool isGrounded;
+    public bool isSprinting;
+    public breathing breathingScript;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed = defaultSpeed;
     }
 
     // Update is called once per frame
@@ -53,9 +54,17 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = sprintSpeed; // set current speed to sprint speed
             sprintTimer -= Time.deltaTime; // decrease the sprint timer
+            isSprinting = true;
+            breathingScript.playBreathSound();
         }
         else
         {
+            if(isSprinting == true)
+            {
+                breathingScript.playOutOfBreathSound();
+                isSprinting = false;
+            }
+            isSprinting = false;
             speed = defaultSpeed; // set current speed to default speed
             if (sprintTimer < sprintTime && !Input.GetKey(KeyCode.LeftShift))
             {
