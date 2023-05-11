@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     bool isGrounded;
+    public bool isSprinting;
+    public breathing breathingScript;
 
     // Start is called before the first frame update
     void Start()
@@ -38,9 +40,17 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = sprintSpeed; // set current speed to sprint speed
             sprintTimer -= Time.deltaTime; // decrease the sprint timer
+            isSprinting = true;
+            breathingScript.playBreathSound();
         }
         else
         {
+            if(isSprinting == true)
+            {
+                breathingScript.playOutOfBreathSound();
+                isSprinting = false;
+            }
+            isSprinting = false;
             speed = defaultSpeed; // set current speed to default speed
             if (sprintTimer < sprintTime)
             {

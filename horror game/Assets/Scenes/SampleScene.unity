@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.635
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.000011605565, g: 0.000000020801078, b: 0, a: 0.635}
+  m_IndirectSpecularColor: {r: 0.00001160559, g: 0.000000020801078, b: 0, a: 0.635}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -500,6 +500,9 @@ GameObject:
   - component: {fileID: 1199074120}
   - component: {fileID: 1199074119}
   - component: {fileID: 1199074121}
+  - component: {fileID: 1199074122}
+  - component: {fileID: 1199074123}
+  - component: {fileID: 1199074124}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -556,13 +559,202 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1199074119}
+  defaultSpeed: 4
+  sprintSpeed: 10
   speed: 12
+  sprintTime: 10
   gravity: -60
   groundCheck: {fileID: 1792590451}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 1
+  isSprinting: 0
+  breathingScript: {fileID: 1199074124}
+--- !u!82 &1199074122
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199074118}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1199074123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199074118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3166da608a6e10649afbe56af0c1a4f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepsSounds:
+  - materialName: Grass
+    walkingSounds:
+    - clip: {fileID: 8300000, guid: 83ba82358c8f7414f86cf743024592ca, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: d1f68fc6f2262c8439f6aa6ddbfacd3e, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: 812af1227d892b64b9da5070bd21c7ad, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: 0df9f00b10137d9488fcf1b8d9666f20, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: a3141214ca8014a49b5483b9de826429, type: 3}
+      volume: 0.15
+    runningSounds:
+    - clip: {fileID: 8300000, guid: 683d1affef561324293eb7d7a52e3ff4, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: f683e956aaf474e4f8aeaca5125a950f, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: 94a01ca3c0583bc45b0b1abdf06d4ae2, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: 18a4aa1d5c42234489454a9932b4f84c, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: 5eb1ca9f32991db4795f4f8eb562d715, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: ae2578d153b5a804fa499e6bcfe9de4d, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: 2fc3b0b61b297564c85603d67675e627, type: 3}
+      volume: 0.1
+  - materialName: Gravel
+    walkingSounds:
+    - clip: {fileID: 8300000, guid: 0d0d49fec698f0a4fa4bc70073ce4fe3, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: e0c13a482818a944dbe76fa32a930821, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: 822a793f472cca843ab1d0f88543a736, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: bc124aad6b5bd6847ae6253672549356, type: 3}
+      volume: 0.1
+    - clip: {fileID: 8300000, guid: b6fd73acaa999724eb617c9c60150249, type: 3}
+      volume: 0.1
+    runningSounds:
+    - clip: {fileID: 8300000, guid: 8d52e5784b3a2fd4f97a9fa9217b66fc, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: 3c742511f8e766646bda396abd4ef3c5, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: 86d853f8e9839ac4b8304ff81c651460, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: 60dffdd32f39c6d45b913d55c5e7841c, type: 3}
+      volume: 0.15
+    - clip: {fileID: 8300000, guid: ed91e174081e617448fe9ad21a89273b, type: 3}
+      volume: 0.15
+  playerSoundSource: {fileID: 1199074122}
+  playerMovementComponent: {fileID: 1199074121}
+  publicTerrainTextureIndex: 0
+  stepTimer: 0
+--- !u!114 &1199074124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199074118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06ad7428c8af0d46b37d04f36d54f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSoundSource: {fileID: 1199074122}
+  runningBreathSounds:
+  - clip: {fileID: 8300000, guid: 5d0ba446baaddcc44b79984c83c044b1, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 8256bbfd77beda1429357016c43a3746, type: 3}
+    volume: 1
+  runningOutOfBreathSound:
+    clip: {fileID: 8300000, guid: 1ae86dd8a1987cd4297605554d86e2dd, type: 3}
+    volume: 0.8
 --- !u!1 &1282505690
 GameObject:
   m_ObjectHideFlags: 0
