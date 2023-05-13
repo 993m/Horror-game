@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isSprinting;
     public breathing breathingScript;
 
+    public SprintBar sprintBar;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         Sprint();
 
         Move();
+
+        sprintBar.UpdateSprintBar(sprintTime, sprintTimer);
     }
 
     void Move()
