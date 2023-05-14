@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool disabled = false;
     public CharacterController controller;
     public float defaultSpeed = 4f;
     public float sprintSpeed = 10f;
@@ -30,11 +31,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+	if(!disabled){
         Gravity();
 
         Sprint();
 
-        Move();
+        Move();}
     }
 
     void Move()
