@@ -7,6 +7,8 @@ public class Teleport : MonoBehaviour
     PlayerMovement player;
     [SerializeField] GameObject tu;
     [SerializeField] GameObject dungeon;
+    [SerializeField] GameObject text;
+    [SerializeField] GameObject textD;
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +34,11 @@ public class Teleport : MonoBehaviour
         player.transform.position = dungeon.transform.position;
 	yield return new WaitForSeconds(0.2f);
 	player.disabled = false;
+        textD.SetActive(false);
+	text.SetActive(true);
+	textD.SetActive(false);
+	yield return new WaitForSeconds(10f);
+	text.SetActive(false);
+	textD.SetActive(true);
     }
 }
