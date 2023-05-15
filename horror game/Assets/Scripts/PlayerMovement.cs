@@ -32,15 +32,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	if(!disabled){
-        Gravity();
+        if (!disabled)
+        {
+            Gravity();
 
-        Sprint();
+            Sprint();
 
-        Move();
+            Move();
 
-        sprintBar.UpdateSprintBar(sprintTime, sprintTimer);
-        
+            sprintBar.UpdateSprintBar(sprintTime, sprintTimer);
+        }
     }
 
     void Move()
