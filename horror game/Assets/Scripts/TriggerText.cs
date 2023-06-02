@@ -13,13 +13,13 @@ public class TriggerText : MonoBehaviour
     }
 
 
-    void OnTriggerEnter()
+    public void OnTriggerEnter()
     {
         Object.SetActive(true);
 
     }
 
-    void OnTriggerExit()
+    public void OnTriggerExit()
     {
         Object.SetActive(false);
     }
