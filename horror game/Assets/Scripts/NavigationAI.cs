@@ -3,7 +3,7 @@ using UnityEngine.AI;
 public class NavigationAI : MonoBehaviour
 {
     Vector3 destinationPoint;
-    public float walkRange = 500;
+    public float walkRange = 200;
     bool walkPointSet = false;
     NavMeshAgent agent;
     public float runningSpeed = 6;
@@ -22,6 +22,7 @@ public class NavigationAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        player = GameObject.Find("Player");
         playerScript = player.GetComponent<RespawnOrKillPlayer>();
     }
 
@@ -36,19 +37,22 @@ public class NavigationAI : MonoBehaviour
     }
 
     void Patrol()
-    { 
+    {
         if (!walkPointSet)
         {
-            agent.speed = 0;
             animator.SetFloat("Speed", 0);
             SearchForDestination();
         }
-        if (walkPointSet)
+        else
         {
-            agent.speed = walkingSpeed;
-            animator.SetFloat("Speed", 0.1f);
             agent.SetDestination(destinationPoint);
-        }
+            if(agent.pathPending == false)
+            {
+                agent.speed = walkingSpeed;
+                animator.SetFloat("Speed", 0.2f);
+            }
+        }    
+        
         if (Vector3.Distance(transform.position, destinationPoint) < 10) walkPointSet = false;
     }
 
@@ -67,9 +71,13 @@ public class NavigationAI : MonoBehaviour
 
     void Chase()
     {
-        agent.speed = runningSpeed;
-        animator.SetFloat("Speed", 0.6f);
-        agent.SetDestination(player.transform.position);
+        NavMeshPath path = new NavMeshPath();
+        if(agent.CalculatePath(player.transform.position, path))
+        {
+            agent.SetPath(path);
+            agent.speed = runningSpeed;
+            animator.SetFloat("Speed", 1);
+        }
     }
 
     void Attack()

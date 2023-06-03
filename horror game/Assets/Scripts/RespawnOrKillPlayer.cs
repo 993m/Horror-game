@@ -9,22 +9,21 @@ public class RespawnOrKillPlayer : MonoBehaviour
     public int saveChances = 3;
     Vector3 lastSavedPosition;
     bool canBeSaved;
-    TriggerText triggerText;
-    public GameObject printSavesCanvas;
     TMP_Text text;
+    TMP_Text chances;
 
     // Start is called before the first frame update
     void Start()
     {
         canBeSaved = false;
-        triggerText = GetComponent<TriggerText>();
-        text = printSavesCanvas.GetComponent<TMP_Text>();
+        text = GameObject.Find("Canvas").transform.Find("KillText").GetComponents<TMP_Text>()[0];
+        chances = GameObject.Find("Canvas").transform.Find("NumberOfSaves").GetComponents<TMP_Text>()[0];
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.SetText(saveChances.ToString());
+        chances.SetText(saveChances.ToString());
 
         if (Input.GetKeyDown("space") && saveChances != 0)
         {
@@ -41,9 +40,9 @@ public class RespawnOrKillPlayer : MonoBehaviour
 
     public void attackPlayer()
     {
-        triggerText.OnTriggerEnter();
+        text.enabled = true;
         WaitForFunction();
-        triggerText.OnTriggerExit();
+        text.enabled = false;
 
         if (canBeSaved)
         {
