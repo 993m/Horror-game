@@ -13,7 +13,11 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        for(int i=0; i<enemyCount; i++)
+        
+    }
+
+    public void Spawn(){
+	for(int i=0; i<enemyCount; i++)
         {
             getRandomSpawnPoint();
             Instantiate(enemyClone, spawnPoint, Quaternion.identity);

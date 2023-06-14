@@ -5,6 +5,7 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     PlayerMovement player;
+    int ct = 0;
     [SerializeField] GameObject tu;
     [SerializeField] GameObject dungeon;
     [SerializeField] GameObject text;
@@ -24,7 +25,16 @@ public class Teleport : MonoBehaviour
     }
 
     void OnTriggerEnter(){
-	StartCoroutine("TeleportRoutine");
+	if(ct == 0)
+	{
+	    EnemySpawner spawn = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemySpawner>();
+	    Finish fin = GameObject.FindGameObjectWithTag("Finish").GetComponent<Finish>();
+	    spawn.Spawn();
+	    fin.SetTrig();
+	    StartCoroutine("TeleportRoutine");
+	    
+	    ct = 1;
+	}
     }
     
     IEnumerator TeleportRoutine(){
