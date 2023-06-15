@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject TutorialView;
+    public GameObject MainMenuView;
+
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     // Load scene
     public void Play()
     {
@@ -14,6 +22,7 @@ public class MainMenu : MonoBehaviour
     // Quit game
     public void Quit()
     {
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
         Debug.Log("Player has quit the game");
     }

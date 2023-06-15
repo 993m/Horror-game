@@ -9,14 +9,14 @@ public class RespawnOrKillPlayer : MonoBehaviour
     public int saveChances = 3;
     Vector3 lastSavedPosition;
     bool canBeSaved;
-    TMP_Text text;
+    GameObject text;
     TMP_Text chances;
 
     // Start is called before the first frame update
     void Start()
     {
         canBeSaved = false;
-        text = GameObject.Find("Canvas").transform.Find("KillText").GetComponents<TMP_Text>()[0];
+        text = GameObject.Find("Canvas").transform.Find("KillText").gameObject;
         chances = GameObject.Find("Canvas").transform.Find("NumberOfSaves").GetComponents<TMP_Text>()[0];
     }
 
@@ -33,16 +33,17 @@ public class RespawnOrKillPlayer : MonoBehaviour
         }
     }
 
-    IEnumerator WaitForFunction()
+
+    IEnumerator PrintText()
     {
-        yield return new WaitForSeconds(3);
+        text.SetActive(true);
+        yield return new WaitForSeconds(10);
+        text.SetActive(false);
     }
 
     public void attackPlayer()
     {
-        text.enabled = true;
-        WaitForFunction();
-        text.enabled = false;
+        StartCoroutine(PrintText());
 
         if (canBeSaved)
         {
