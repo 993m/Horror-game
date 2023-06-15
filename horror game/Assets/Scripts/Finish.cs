@@ -23,11 +23,17 @@ public class Finish : MonoBehaviour
 	trig = 1;
     }
 
+    IEnumerator PrintText()
+    {
+        Object.SetActive(true);
+        yield return new WaitForSeconds(10);
+    }
+
     void OnTriggerEnter()
     {
 	if(trig == 1){
-	    //SceneManager.LoadScene("MainMenu");
-	    Object.SetActive(true);
-	}
+            StartCoroutine(PrintText());
+        SceneManager.LoadScene("MainMenu");
+        }
     }
 }
