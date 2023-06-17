@@ -3745,6 +3745,7 @@ Transform:
   - {fileID: 1275128413795484811}
   - {fileID: 1275128413869932671}
   - {fileID: 1275128412724923904}
+  - {fileID: 639052815831281841}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3811,3 +3812,224 @@ MonoBehaviour:
     m_Bits: 64
   sightRange: 40
   attackRange: 2.5
+--- !u!1 &3611333779762538765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639052815831281841}
+  - component: {fileID: 3660845693944704406}
+  - component: {fileID: 7101115808348573924}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639052815831281841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611333779762538765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1275128414530566330}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &3660845693944704406
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611333779762538765}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 70
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.01
+      value: 1
+      inSlope: -12.516333
+      outSlope: -12.516333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.3962903
+    - serializedVersion: 3
+      time: 0.035872955
+      value: 0.6809082
+      inSlope: -10.309357
+      outSlope: -10.309357
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.54294366
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.05388931
+      value: 0.4892578
+      inSlope: -6.25249
+      outSlope: -6.25249
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.10579498
+      value: 0.30297852
+      inSlope: -1.5631225
+      outSlope: -1.5631225
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.19571319
+      value: 0.19671631
+      inSlope: -0.4551357
+      outSlope: -0.4551357
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.59693944
+    - serializedVersion: 3
+      time: 0.33983642
+      value: 0.1362915
+      inSlope: -0.28642777
+      outSlope: -0.28642777
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.30782795
+    - serializedVersion: 3
+      time: 0.62809813
+      value: 0.065216064
+      inSlope: -0.2011257
+      outSlope: -0.2011257
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.24775341
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.010003988
+      outSlope: -0.010003988
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7101115808348573924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611333779762538765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5951fc3b4b4715341b546a64ebced607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepsSounds:
+  - materialName: Grass
+    walkingSounds: []
+    runningSounds:
+    - clip: {fileID: 8300000, guid: ee64fe4256807834c81b14e99795802c, type: 3}
+      volume: 0.2
+    - clip: {fileID: 8300000, guid: 74eb7499a3dc1ca4681f04d747f70e51, type: 3}
+      volume: 0.2
+    - clip: {fileID: 8300000, guid: fd90043ea5263954f8de7c7b9010fc5a, type: 3}
+      volume: 0.2
+    - clip: {fileID: 8300000, guid: a40376f07189ea246b45009c8a582bd3, type: 3}
+      volume: 0.2
+  - materialName: Gravel
+    walkingSounds: []
+    runningSounds:
+    - clip: {fileID: 8300000, guid: 68c07d519ccd5c748aed050ebe133cc9, type: 3}
+      volume: 0.45
+    - clip: {fileID: 8300000, guid: a86837a0186be0444a6ec5c04ee42300, type: 3}
+      volume: 0.45
+    - clip: {fileID: 8300000, guid: 1fdf0fe32c0c35b4d8f52a60057eb08b, type: 3}
+      volume: 0.45
+    - clip: {fileID: 8300000, guid: f0c8043bfeca1ed4b88bea369605143b, type: 3}
+      volume: 0.45
+  enemySoundSource: {fileID: 3660845693944704406}
+  publicTerrainTextureIndex: 0
+  stepTimer: 0
