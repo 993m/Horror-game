@@ -26,14 +26,14 @@ public class Finish : MonoBehaviour
     IEnumerator PrintText()
     {
         Object.SetActive(true);
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("MainMenu");
     }
 
     void OnTriggerEnter()
     {
 	if(trig == 1){
             StartCoroutine(PrintText());
-        SceneManager.LoadScene("MainMenu");
         }
     }
 }

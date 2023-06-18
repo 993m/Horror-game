@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -60,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && sprintTimer > 0)
         {
             speed = sprintSpeed; // set current speed to sprint speed
-            sprintTimer -= Time.deltaTime; // decrease the sprint timer
+            sprintTimer -= 2*Time.deltaTime; // decrease the sprint timer
             isSprinting = true;
             breathingScript.playBreathSound();
         }

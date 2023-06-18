@@ -40,9 +40,9 @@ public class Teleport : MonoBehaviour
     IEnumerator TeleportRoutine(){
 	
         player.disabled = true;
-	yield return new WaitForSeconds(0.2f);
+	yield return new WaitForSeconds(2f);
         player.transform.position = dungeon.transform.position;
-	yield return new WaitForSeconds(0.2f);
+	yield return new WaitForSeconds(2f);
 	player.disabled = false;
         textD.SetActive(false);
 	text.SetActive(true);
