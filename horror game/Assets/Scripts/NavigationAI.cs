@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 public class NavigationAI : MonoBehaviour
@@ -33,7 +34,7 @@ public class NavigationAI : MonoBehaviour
 
         if (!playerInAttackRange && !playerInSightRange) Patrol();
         if (!playerInAttackRange && playerInSightRange) Chase();
-        if (playerInAttackRange)  Attack();
+        if (playerInAttackRange) Attack();
     }
 
     void Patrol()
@@ -88,6 +89,6 @@ public class NavigationAI : MonoBehaviour
         }
 
         agent.SetDestination(transform.position);
-        playerScript.attackPlayer();
+        StartCoroutine(playerScript.attackPlayer());
     }
 }

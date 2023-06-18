@@ -25,25 +25,24 @@ public class RespawnOrKillPlayer : MonoBehaviour
     {
         chances.SetText(saveChances.ToString());
 
-        if (Input.GetKeyDown("space") && saveChances != 0)
+        if (Input.GetKeyDown(KeyCode.Space) && saveChances != 0)
         {
             lastSavedPosition = transform.position;
             saveChances--;
             canBeSaved = true;
         }
+
+
+        // check if player wants to exit game
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
-
-    IEnumerator PrintText()
+    public IEnumerator attackPlayer()
     {
         text.SetActive(true);
-        yield return new WaitForSeconds(10);
-        text.SetActive(false);
-    }
-
-    public void attackPlayer()
-    {
-        StartCoroutine(PrintText());
 
         if (canBeSaved)
         {
@@ -53,6 +52,9 @@ public class RespawnOrKillPlayer : MonoBehaviour
         {
             killPlayer();
         }
+
+        yield return new WaitForSeconds(2);
+        text.SetActive(false);
     }
 
     void killPlayer()
@@ -62,7 +64,7 @@ public class RespawnOrKillPlayer : MonoBehaviour
 
     void respawnPlayer()
     {
-        canBeSaved = false;
         transform.position = lastSavedPosition;
+        canBeSaved = false;
     }
 }
