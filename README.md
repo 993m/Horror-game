@@ -12,4 +12,7 @@ Can you help Alex find his sister and escape the Midnight Forest before it's too
 
 
 #
-### Here you can find the user stories, the backlog and the uml diagram: https://trello.com/b/mcIfyj0s/assembly.
+### Here you can find the user stories, the demo, the backlog and the uml diagram: https://trello.com/b/mcIfyj0s/assembly.
+
+#
+### You can access the game here only with an unibuc.ro email address: https://unibucro0-my.sharepoint.com/:u:/g/personal/maria-simona_cioclov_s_unibuc_ro/EW9580HljkpBryccZntaYgUBJUGRbb1SDYSojayUANIxCA?e=zY4TrI
